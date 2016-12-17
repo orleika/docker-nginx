@@ -10,7 +10,7 @@ services:
   - docker
 
 script:
- - docker build --tag orleika/nginx .
- - docker run -d -p 80:80 orleika/nginx
- - sleep 5
-- curl -sSf localhost
+  - docker build --tag orleika/nginx .
+  - docker run -d -p 80:80 orleika/nginx
+  - sleep 5
+  - curl -sSf localhost
