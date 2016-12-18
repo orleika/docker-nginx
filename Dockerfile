@@ -81,8 +81,6 @@ RUN addgroup -S nginx \
     --without-http_memcached_module \
     --without-http_empty_gif_module \
     --without-http_browser_module \
-    --without-http_proxy_module \
-    --without-http_fastcgi_module \
     --add-module=/tmp/headers-more-nginx-module \
     --add-module=/tmp/ngx_brotli \
   && make -j ${BUILD_CORES} && make install && make clean \
