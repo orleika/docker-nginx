@@ -9,10 +9,8 @@
 > nginx docker image
 
 Small-Secure-Fast nginx docker image.  
-Base image is alpine, which is a security-oriented, lightweight Linux distribution.  
-Most response headers are concealed, and DDoS mitigation is equipped.
-You should use secure headers included in `conf.d` for further safety considerations.  
-Additionally, nginx caching parameters are optimized.
+Base image is alpine, which is a security-oriented, lightweight Linux distribution. Most response headers are concealed, and DDoS mitigation is equipped. You should use secure headers included in `conf.d` for further safety considerations. Additionally, nginx caching parameters are optimized.  
+This image is automatically released by Docker Cloud.
 
 ## Table of Contents
 
