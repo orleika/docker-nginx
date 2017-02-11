@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:latest
 
 MAINTAINER orleika <orleika.net@gmail.com>
 
@@ -94,9 +94,7 @@ RUN addgroup -S nginx \
   && rm -rf /tmp/*  /root/.gnupg
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY headers_params /etc/nginx/conf.d/headers_params
-COPY proxy_params /etc/nginx/conf.d/proxy_params
-COPY ssl_params /etc/nginx/conf.d/ssl_params
+COPY log_format /etc/nginx/conf.d/log_format
 COPY default.conf /etc/nginx/sites-enabled/default.conf
 
 EXPOSE 80 443
