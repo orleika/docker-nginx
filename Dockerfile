@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER orleika <orleika.net@gmail.com>
+MAINTAINER orleika <admin@orleika.io>
 
 ARG NGINX_VERSION=1.11.10
 ARG LIBRESSL_VERSION=2.5.1
