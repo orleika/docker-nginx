@@ -83,7 +83,6 @@ RUN addgroup -S nginx \
   && rm -rf /tmp/*  /root/.gnupg
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY log_format /etc/nginx/conf.d/log_format
 COPY default.conf /etc/nginx/sites-enabled/default.conf
 
 EXPOSE 80 443
