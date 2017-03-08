@@ -4,7 +4,6 @@ sudo: required
 
 branches:
   only:
-    - master
     - devel
 
 services:
