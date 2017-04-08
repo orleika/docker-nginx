@@ -1,25 +1,19 @@
-# docker-nginx
+# Docker Nginx Image _(docker-nginx)_
 
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://orleika.github.io/mit-license)
 [![Build Status](https://img.shields.io/travis/orleika/docker-nginx/master.svg?style=flat-square)](https://travis-ci.org/orleika/docker-nginx)
-[![nginx](http://img.shields.io/badge/nginx-v1.11.10-blue.svg?style=flat-square)](https://nginx.org/en/download.html)
+[![nginx](http://img.shields.io/badge/nginx-v1.11.12-blue.svg?style=flat-square)](https://nginx.org/en/download.html)
 [![LibreSSL](http://img.shields.io/badge/LibreSSL-v2.5.1-blue.svg?style=flat-square)](https://www.libressl.org/)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://orleika.github.io/mit-license)
 
-> nginx docker image
+> docker nginx image
 
-Small-Secure-Fast nginx docker image.  
+Small-Secure-Fast docker nginx image.  
 Base image is alpine, which is a security-oriented, lightweight Linux distribution. Most response headers are concealed, and DDoS mitigation is equipped. You should use secure headers included in `conf.d` for further safety considerations. Additionally, nginx caching parameters are optimized.  
 This image is automatically released by Docker Cloud.
 
-## Table of Contents
-
-- [Install](#install)
-- [Usage](#usage)
-- [Contribute](#contribute)
-- [License](#license)
-
 ## Install
+
+This project uses [docker](https://docs.docker.com). Go check them out if you don't have them locally installed.
 
 ```sh
 $ docker pull orleika/nginx
@@ -33,8 +27,9 @@ $ docker run -d -p 80:80 orleika/nginx
 
 ## Contribute
 
-PRs accepted.
+Please open [issues](https://github.com/orleika/docker-nginx/issues/new) or submit Pull requests to report bugs, features, or other problems.  
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
 ## License
 
-MIT © orleika
+[MIT © orleika](LICENSE)

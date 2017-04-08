@@ -1,9 +1,9 @@
 FROM alpine:latest
 
-MAINTAINER orleika <orleika.net@gmail.com>
+MAINTAINER orleika <admin@orleika.io>
 
-ARG NGINX_VERSION=1.11.10
-ARG LIBRESSL_VERSION=2.5.1
+ARG NGINX_VERSION=1.11.12
+ARG LIBRESSL_VERSION=2.5.2
 ARG GPG_LIBRESSL="A1EB 079B 8D3E B92B 4EBD  3139 663A F51B D5E4 D8D5"
 ARG GPG_NGINX="B0F4 2533 73F8 F6F5 10D4  2178 520A 9993 A1C0 52F8"
 
@@ -83,7 +83,6 @@ RUN addgroup -S nginx \
   && rm -rf /tmp/*  /root/.gnupg
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY log_format /etc/nginx/conf.d/log_format
 COPY default.conf /etc/nginx/sites-enabled/default.conf
 
 EXPOSE 80 443
