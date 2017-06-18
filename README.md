@@ -1,7 +1,7 @@
 # Docker Nginx Image _(docker-nginx)_
 
 [![Build Status](https://img.shields.io/travis/orleika/docker-nginx/master.svg?style=flat-square)](https://travis-ci.org/orleika/docker-nginx)
-[![nginx](http://img.shields.io/badge/nginx-v1.13.0-blue.svg?style=flat-square)](https://nginx.org/en/download.html)
+[![nginx](http://img.shields.io/badge/nginx-v1.13.1-blue.svg?style=flat-square)](https://nginx.org/en/download.html)
 [![LibreSSL](http://img.shields.io/badge/LibreSSL-v2.5.4-blue.svg?style=flat-square)](https://www.libressl.org/)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://orleika.github.io/mit-license)
 
