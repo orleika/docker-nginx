@@ -6,4 +6,6 @@ add_header X-XSS-Protection "1; mode=block";
 
 add_header X-Content-Type-Options nosniff;
 
-add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://ssl.google-analytics.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://ssl.google-analytics.com; style-src 'self' https://fonts.googleapis.com; child-src 'none'; object-src 'none'";
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://ssl.google-analytics.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://ssl.google-analytics.com; style-src 'self' https://fonts.googleapis.com; child-src 'none'; object-src 'none'";
+
+add_header Referrer-Policy "no-referrer"

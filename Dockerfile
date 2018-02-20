@@ -74,7 +74,6 @@ RUN addgroup -S nginx \
     --add-module=/tmp/ngx_brotli \
   && make -j ${BUILD_CORES} && make install && make clean \
   && rm -rf /etc/nginx/html/ \
-  && mkdir /etc/nginx/conf.d/ \
   && mkdir -p /usr/share/nginx/html/ \
   && install -m644 html/index.html /usr/share/nginx/html/ \
   && install -m644 html/50x.html /usr/share/nginx/html/ \
@@ -83,6 +82,7 @@ RUN addgroup -S nginx \
   && rm -rf /tmp/*  /root/.gnupg
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY conf.d /etc/nginx/conf.d/
 COPY default.conf /etc/nginx/sites-enabled/default.conf
 
 EXPOSE 80 443
