@@ -2,8 +2,8 @@ FROM alpine:latest
 
 MAINTAINER orleika <admin@orleika.io>
 
-ARG NGINX_VERSION=1.13.8
-ARG LIBRESSL_VERSION=2.6.4
+ARG NGINX_VERSION=1.15.1
+ARG LIBRESSL_VERSION=2.7.4
 ARG GPG_LIBRESSL="A1EB 079B 8D3E B92B 4EBD  3139 663A F51B D5E4 D8D5"
 ARG GPG_NGINX="B0F4 2533 73F8 F6F5 10D4  2178 520A 9993 A1C0 52F8"
 
@@ -74,7 +74,6 @@ RUN addgroup -S nginx \
     --add-module=/tmp/ngx_brotli \
   && make -j ${BUILD_CORES} && make install && make clean \
   && rm -rf /etc/nginx/html/ \
-  && mkdir /etc/nginx/conf.d/ \
   && mkdir -p /usr/share/nginx/html/ \
   && install -m644 html/index.html /usr/share/nginx/html/ \
   && install -m644 html/50x.html /usr/share/nginx/html/ \
@@ -83,6 +82,7 @@ RUN addgroup -S nginx \
   && rm -rf /tmp/*  /root/.gnupg
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY conf.d /etc/nginx/conf.d/
 COPY default.conf /etc/nginx/sites-enabled/default.conf
 
 EXPOSE 80 443
